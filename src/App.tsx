@@ -3,6 +3,9 @@ import { Header } from "./components/Header";
 import { GlobalStyle } from "./styles/global";
 import { useState } from "react";
 import Modal from "react-modal";
+import { TransactionsModal } from "./components/Modal";
+
+Modal.setAppElement("#root");
 
 export function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,13 +17,14 @@ export function App() {
   function handleCloseModal() {
     setIsModalOpen(false);
   }
+  
   return (
     <>
       <Header onOpenModal={handleOpenModal} />
       <Dashboard />
-      <Modal isOpen={isModalOpen} onRequestClose={handleCloseModal}>
-        <h2>Cadastrar transação</h2>
-      </Modal>
+      <TransactionsModal
+        isOpen={isModalOpen}
+        onRequestClose={handleCloseModal} />
       <GlobalStyle />
     </>
   );
