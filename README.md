@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Created in React.Js, using Styled-Components, ContextAPI, saving data with Mirage as a fake API, using Axios to request it.
+
 ## How to use this project
 
 Clone this repository.
